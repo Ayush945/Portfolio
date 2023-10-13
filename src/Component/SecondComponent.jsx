@@ -36,7 +36,7 @@ function SecondComponent() {
     ]
     return (
         <>
-            <div className='min-h-screen cursor-pointer'>
+            <div className='min-h-screen cursor-pointer mt-10'>
                 <h1 className='text-4xl text-center mb-20 font-bold'>Tech Stack</h1>
                 <div className='flex justify-around'>
 

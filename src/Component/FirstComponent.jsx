@@ -7,8 +7,8 @@ function FirstComponent() {
         <>
             <div className='flex justify-center items-center min-h-screen gap-10'>
                 <div className='font-semibold italic cursor-pointer hover:scale-105 transition-transform duration-500'>
-                    <h1 className='text-9xl'>Ayush</h1>
-                    <h1 className='text-9xl'>Thapa</h1>
+                    <h1 className='text-6xl md:text-9xl transition-all duration-500'>Ayush</h1>
+                    <h1 className='text-6xl md:text-9xl transition-all duration-500'>Thapa</h1>
                 </div>
                 <div>
                     <img

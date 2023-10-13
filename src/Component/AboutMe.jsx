@@ -9,7 +9,7 @@ const socialMedia = [
 
 function AboutMe() {
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center py-10 cursor-pointer">
+        <div className="min-h-screen flex flex-col justify-center items-center py-10 cursor-pointer bg-pink-200">
             <h1 className="text-4xl font-bold mb-5 text-center">About Me</h1>
             <div className="text-center max-w-md text-xl">
                 <p className="mb-3">
