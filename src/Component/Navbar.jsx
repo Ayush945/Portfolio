@@ -12,7 +12,10 @@ function Navbar() {
     return (
         <>
             <div className='flex justify-between p-6 cursor-pointer sticky top-0 z-10'>
-                <div className='text-3xl'>
+                <div
+                    className='text-3xl'
+                    onClick={() => scrollToOffset(0)}
+                >
                     <p> 𝒜</p>
                 </div>
                 <div className='flex gap-6 cursor-pointer'>

@@ -21,13 +21,13 @@ function TeamProject() {
     };
 
     return (
-        <div className='min-h-screen cursor-pointer mt-8'>
+        <div className='min-h-screen cursor-pointer mt-8 bg-slate-100'>
             <div className='flex flex-col items-center'>
-                <div className='font-semibold text-xl p-10'>Team Projects</div>
+                <div className='font-semibold text-xl p-10 '>Team Projects</div>
 
                 <div className='flex flex-col'>
                     {teamProjects.map((project, index) => (
-                        <div key={index} className='flex items-center gap-10 mb-24'>
+                        <div key={index} className='flex items-start gap-10 mb-24'>
                             <div>
                                 <img src={project.picture} alt='clinic' className='h-[300px] w-[250px]' />
                             </div>
