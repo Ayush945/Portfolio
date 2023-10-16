@@ -9,7 +9,7 @@ export default function ContactMe() {
     }
     return (
         <>
-            <div className='flex flex-col items-center gap-5 bg-purple-200 cursor-pointer'>
+            <div className='flex flex-col items-center gap-5 bg-gray-50 cursor-pointer'>
                 <div className=' text-blue-500 text-3xl mt-12'>CONTACT <FontAwesomeIcon icon={faArrowTurnDown} /></div>
                 <div className='text-2xl'><FontAwesomeIcon icon={faEnvelope} className=' text-red-500' /> Mail </div>
                 <p
