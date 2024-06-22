@@ -9,8 +9,17 @@ function TeamProject() {
     const [showDropdown, setShowDropdown] = useState({});
 
     const teamProjects = [
-        { picture: clinicImg, name: 'AllWell Clinic', navigate: '/clinic-detail', frontend: "https://github.com/DiwashBhatta17/allwell_clinic", backend: "https://github.com/Ayush945/SpringBootProject" },
-        { picture: FoodImg, name: 'Newa Express', navigate: '/delivery-detail', frontend: "https://github.com/DiwashBhatta17/Newa_express", backend: "https://github.com/Kiryui13/foodapp" }
+        { picture: clinicImg, name: 'AllWell Clinic',tech:'React, Postman, Chakra, API testing, Spring boot, Unit Testing', 
+            frontend: "https://github.com/DiwashBhatta17/allwell_clinic", 
+            backend: "https://github.com/Ayush945/SpringBootProject",
+            detail:"clinic where patient can book appointment." 
+
+        },
+        { picture: FoodImg, name: 'Newa Express',tech:'React, Postman, Material UI, API testing, Spring boot, Unit Testing', 
+            frontend: "https://github.com/DiwashBhatta17/Newa_express", 
+            backend: "https://github.com/Kiryui13/foodapp",
+            detail:"customer to order authentic newari foods." 
+         }
     ];
 
     const toggleDropdown = (index) => {
@@ -34,12 +43,11 @@ function TeamProject() {
                             </div>
                             <div className='flex flex-col'>
                                 <p className=' text-red-700 text-xl'>{project.name}</p>
-                                <p className='mt-10'>Worked on a team to build this project,</p>
-                                <p>To know more about it, click on detail</p>
+                                <p className=' mt-7'>Worked on a team to build Full stack web application for</p>
+                                <p>{project.detail}</p>
+                                <span className='text-blue-700 mt-7'>Tech:</span>
+                                <p>{project.tech}</p>
                                 <div className='flex gap-10 mt-20'>
-                                    <Link to={project.navigate} target='blank'>
-                                        <button className='bg-blue-500 text-white rounded-lg px-4 py-1 hover:bg-blue-700'>Detail</button>
-                                    </Link>
                                     <div className='relative'>
                                         <button
                                             className='bg-blue-500 text-white rounded-lg px-4 py-1 hover:bg-blue-700'
