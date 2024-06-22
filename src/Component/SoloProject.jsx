@@ -26,11 +26,11 @@ function SoloProject() {
                     <p> React TailwindCSS</p>
                     <div className='flex gap-8 mt-10'>
                         <button
-                            className='p-2 shadow-lg bg-blue-500 text-white rounded-sm'
+                            className='p-2 shadow-lg bg-blue-500 text-white rounded-sm  hover:bg-blue-700'
                             onClick={() => window.open('https://github.com/Ayush945/Project-Portfolio', '_blank')}
-                        >Source Code</button>
+                        >Source Code <FontAwesomeIcon icon={faArrowTurnUp} /></button>
                         <button
-                            className='p-2 shadow-lg bg-blue-500 text-white rounded-sm'
+                            className='p-2 shadow-lg bg-blue-500 text-white rounded-sm  hover:bg-blue-700'
                             onClick={() => window.open('https://shimmering-stardust-0197cd.netlify.app/', '_blank')}
                         >
                             Live Demo <FontAwesomeIcon icon={faArrowTurnUp} /> </button>
