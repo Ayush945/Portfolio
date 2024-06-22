@@ -7,7 +7,7 @@ function SoloProject() {
         <>
             <div className='pb-10 pt-10 bg-slate-50'>
                 <div>
-                    <h1 className='text-3xl text-center'>Solo Projects</h1>
+                    <h1 className='text-xl font-semibold text-center'>Solo Projects</h1>
                 </div>
             </div>
 

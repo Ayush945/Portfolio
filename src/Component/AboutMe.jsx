@@ -3,7 +3,7 @@ import githubLogo from '../Image/Github.png';
 import linkedinLogo from '../Image/Linkedin.png';
 
 const socialMedia = [
-    { name: 'linkedin', logo: linkedinLogo, link: 'https://www.linkedin.com/in/ayush-thapa-256453229/' },
+    { name: 'linkedin', logo: linkedinLogo, link: 'https://www.linkedin.com/in/ayush-thapa-106655300/' },
     { name: 'github', logo: githubLogo, link: 'https://github.com/Ayush945' }
 ];
 

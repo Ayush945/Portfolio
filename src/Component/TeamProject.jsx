@@ -23,6 +23,7 @@ function TeamProject() {
     return (
         <div className='min-h-screen cursor-pointer mt-8 bg-slate-100'>
             <div className='flex flex-col items-center'>
+                <div className='font-bold text-4xl p-10'>Projects</div>
                 <div className='font-semibold text-xl p-10 '>Team Projects</div>
 
                 <div className='flex flex-col'>
@@ -32,11 +33,11 @@ function TeamProject() {
                                 <img src={project.picture} alt='clinic' className='h-[300px] w-[250px]' />
                             </div>
                             <div className='flex flex-col'>
-                                <p>Title: {project.name}</p>
+                                <p className=' text-red-700 text-xl'>{project.name}</p>
                                 <p className='mt-10'>Worked on a team to build this project,</p>
                                 <p>To know more about it, click on detail</p>
                                 <div className='flex gap-10 mt-20'>
-                                    <Link to={project.navigate}>
+                                    <Link to={project.navigate} target='blank'>
                                         <button className='bg-blue-500 text-white rounded-lg px-4 py-1 hover:bg-blue-700'>Detail</button>
                                     </Link>
                                     <div className='relative'>
