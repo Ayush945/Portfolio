@@ -6,7 +6,6 @@ import ThirdComponent from './ThirdComponent';
 import ContactMe from './ContactMe';
 
 function Navbar() {
-
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
     const techRef = useRef(null);
@@ -18,16 +17,17 @@ function Navbar() {
             ref.current.scrollIntoView({ behavior: 'smooth' });
         }
     }
+
     return (
         <>
-            <div className='flex justify-between p-6 cursor-pointer sticky top-0 z-10'>
+            <div className='flex justify-between items-center p-6 cursor-pointer sticky top-0 z-10 bg-white shadow-md'>
                 <div
                     className='text-3xl'
                     onClick={() => scrollToRef(homeRef)}
                 >
-                    <p> 𝒜</p>
+                    <p>𝒜</p>
                 </div>
-                <div className='flex gap-6 cursor-pointer'>
+                <div className='hidden md:flex gap-6'>
                     <p
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
                         onClick={() => scrollToRef(homeRef)}
@@ -42,23 +42,63 @@ function Navbar() {
                     </p>
                     <p
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
-                        onClick={() => scrollToRef(techRef)} // Scroll to a specific offset (e.g., 1000 pixels from the top)
+                        onClick={() => scrollToRef(techRef)}
                     >
                         Tech Stack
                     </p>
                     <p
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
-                        onClick={() => scrollToRef(portfolioRef)} // Scroll to a specific offset (e.g., 1500 pixels from the top)
+                        onClick={() => scrollToRef(portfolioRef)}
                     >
                         Portfolio
                     </p>
                     <p
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
-                        onClick={() => scrollToRef(contactRef)} // Scroll to a specific offset (e.g., 2000 pixels from the top)
+                        onClick={() => scrollToRef(contactRef)}
                     >
                         Contact
                     </p>
                 </div>
+                <div className='md:hidden'>
+                    <button className='p-2 border rounded-md'>
+                        <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16M4 18h16'></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div className='md:hidden flex flex-col gap-4 p-4'>
+                <p
+                    className='border rounded-lg p-2 hover:bg-black hover:text-white'
+                    onClick={() => scrollToRef(homeRef)}
+                >
+                    Home
+                </p>
+                <p
+                    className='border rounded-lg p-2 hover:bg-black hover:text-white'
+                    onClick={() => scrollToRef(aboutRef)}
+                >
+                    About
+                </p>
+                <p
+                    className='border rounded-lg p-2 hover:bg-black hover:text-white'
+                    onClick={() => scrollToRef(techRef)}
+                >
+                    Tech Stack
+                </p>
+                <p
+                    className='border rounded-lg p-2 hover:bg-black hover:text-white'
+                    onClick={() => scrollToRef(portfolioRef)}
+                >
+                    Portfolio
+                </p>
+                <p
+                    className='border rounded-lg p-2 hover:bg-black hover:text-white'
+                    onClick={() => scrollToRef(contactRef)}
+                >
+                    Contact
+                </p>
             </div>
 
             <div ref={homeRef}>
@@ -73,11 +113,9 @@ function Navbar() {
             <div ref={portfolioRef}>
                 <ThirdComponent />
             </div>
-            <div ref={contactRef}
-            >
+            <div ref={contactRef}>
                 <ContactMe />
             </div>
-
         </>
     );
 }
