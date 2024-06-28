@@ -1,7 +1,8 @@
 import React from 'react'
 import solo from '../Image/soloimage.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowTurnUp, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
+
 function SoloProject() {
     return (
         <>
@@ -11,8 +12,8 @@ function SoloProject() {
                 </div>
             </div>
 
-            <div className='flex justify-center gap-12 mt-10 pb-10' >
-                <div>
+            <div className='flex flex-col md:flex-row justify-center gap-12 mt-10 pb-10'>
+                <div className='flex-shrink-0'>
                     <img
                         src={solo}
                         alt='car rental'
@@ -24,7 +25,7 @@ function SoloProject() {
                     <p>Landing page for a car rental website</p>
                     <p className='mt-10 text-blue-500'>Tech Stack:</p>
                     <p> React TailwindCSS</p>
-                    <div className='flex gap-8 mt-10'>
+                    <div className='flex flex-col sm:flex-row gap-8 mt-10'>
                         <button
                             className='p-2 shadow-lg bg-blue-500 text-white rounded-sm  hover:bg-blue-700'
                             onClick={() => window.open('https://github.com/Ayush945/Project-Portfolio', '_blank')}
@@ -41,4 +42,4 @@ function SoloProject() {
     )
 }
 
-export default SoloProject
+export default SoloProject;

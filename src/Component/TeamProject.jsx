@@ -3,25 +3,30 @@ import clinicImg from '../Image/ClinicPic.png';
 import FoodImg from '../Image/FoodApp.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { faCaretDown,faArrowTurnUp } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faArrowTurnUp } from '@fortawesome/free-solid-svg-icons';
 
 function TeamProject() {
     const [showDropdown, setShowDropdown] = useState({});
 
     const teamProjects = [
-        { picture: clinicImg, name: 'AllWell Clinic',tech:'React, Postman, Chakra, API testing, Spring boot, Unit Testing', 
-            frontend: "https://github.com/DiwashBhatta17/allwell_clinic", 
+        {
+            picture: clinicImg,
+            name: 'AllWell Clinic',
+            tech: 'React, Postman, Chakra, API testing, Spring boot, Unit Testing',
+            frontend: "https://github.com/DiwashBhatta17/allwell_clinic",
             backend: "https://github.com/Ayush945/SpringBootProject",
-            figma:'https://www.figma.com/file/jsXZgWIbJRzDjLDlViNf9v/Untitled?type=design&node-id=0-1&mode=design&t=E9GVUwIXEmFuGHtk-0',
-            detail:"clinic where patient can book appointment." 
-
+            figma: 'https://www.figma.com/file/jsXZgWIbJRzDjLDlViNf9v/Untitled?type=design&node-id=0-1&mode=design&t=E9GVUwIXEmFuGHtk-0',
+            detail: "clinic where patient can book appointment."
         },
-        { picture: FoodImg, name: 'Newa Express',tech:'React, Postman, Material UI, API testing, Spring boot, Unit Testing', 
-            frontend: "https://github.com/DiwashBhatta17/Newa_express", 
+        {
+            picture: FoodImg,
+            name: 'Newa Express',
+            tech: 'React, Postman, Material UI, API testing, Spring boot, Unit Testing',
+            frontend: "https://github.com/DiwashBhatta17/Newa_express",
             backend: "https://github.com/Kiryui13/foodapp",
-            figma:'https://www.figma.com/file/9qIDDgJFWmGqvCjL9jJnjh/Foodapp?type=design&node-id=0-1&mode=design&t=lFNTL6EbhrA3FACM-0',
-            detail:"customer to order authentic newari foods." 
-         }
+            figma: 'https://www.figma.com/file/9qIDDgJFWmGqvCjL9jJnjh/Foodapp?type=design&node-id=0-1&mode=design&t=lFNTL6EbhrA3FACM-0',
+            detail: "customer to order authentic newari foods."
+        }
     ];
 
     const toggleDropdown = (index) => {
@@ -39,8 +44,8 @@ function TeamProject() {
 
                 <div className='flex flex-col'>
                     {teamProjects.map((project, index) => (
-                        <div key={index} className='flex items-start gap-10 mb-24'>
-                            <div>
+                        <div key={index} className='flex flex-col md:flex-row items-start gap-10 mb-24'>
+                            <div className='flex-shrink-0'>
                                 <img src={project.picture} alt='clinic' className='h-[300px] w-[250px]' />
                             </div>
                             <div className='flex flex-col'>
@@ -49,7 +54,7 @@ function TeamProject() {
                                 <p>{project.detail}</p>
                                 <span className='text-blue-700 mt-7'>Tech:</span>
                                 <p>{project.tech}</p>
-                                <div className='flex gap-10 mt-20'>
+                                <div className='flex flex-col sm:flex-row gap-10 mt-20'>
                                     <button
                                         className='bg-blue-500 text-white px-4 py-1 hover:bg-blue-700'
                                         onClick={() => { window.open(project.figma, '_blank') }}
@@ -63,7 +68,7 @@ function TeamProject() {
                                         >
                                             Source Code <FontAwesomeIcon icon={faCaretDown} />
                                         </button>
-                                       
+
                                         {showDropdown[index] && (
                                             <div className='absolute top-full left-0 mt-2 border border-gray-300 rounded p-2' style={{ width: '100%' }}>
                                                 <p className='text-blue-600 cursor-pointer hover:underline text-center' onClick={() => { window.open(project.frontend, '_blank') }}>Frontend</p>
