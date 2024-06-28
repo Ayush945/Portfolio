@@ -1,40 +1,48 @@
-import { faArrowTurnDown, faEnvelope, faHandPointDown, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-library.add(faGithub, faLinkedin);
+import React from 'react';
+import githubLogo from '../Image/Github.png';
+import linkedinLogo from '../Image/Linkedin.png';
 
-export default function ContactMe() {
-    const email = 'ayushthapa0010@gmail.com';
-    const handleEmailClick = () => {
-        window.location.href = `mailto:${email}`
-    };
+const socialMedia = [
+    { name: 'linkedin', logo: linkedinLogo, link: 'https://www.linkedin.com/in/ayush-thapa-106655300/' },
+    { name: 'github', logo: githubLogo, link: 'https://github.com/Ayush945' }
+];
 
-    const handlePhoneClick=()=>{
-        window.location.href = 'tel:9845998964';
-    };
+function AboutMe() {
     return (
-        <>
-            <div className='flex flex-col items-center bg-gray-50 cursor-pointer'>
-                <div className=' text-blue-500 text-3xl mt-12'>CONTACT <FontAwesomeIcon icon={faArrowTurnDown} /></div>
-                <p
-                    className='mt-5 hover:underline'
-                    onClick={handleEmailClick}
-                ><FontAwesomeIcon icon={faEnvelope} className=' text-red-600' /> Ayushthapa0010@gmail.com</p>
-                <p
-                    className='mt-5 hover:underline'
-                    onClick={handlePhoneClick}
-                ><FontAwesomeIcon icon={faPhone} className=' text-red-600' /> 9845998964</p>
-                <a className='mt-5 hover:underline' href="https://www.linkedin.com/in/ayush-thapa-106655300/" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon className='text-red-600' icon={['fab', 'linkedin']} /> linkedin
-                </a>
-                <a className='mt-5 mb-5 hover:underline'
-                href="https://github.com/Ayush945" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                    <FontAwesomeIcon className='text-red-600' icon={['fab', 'github']} /> Gitub
-                </a>
+        <div className="min-h-screen flex flex-col justify-center items-center py-10 cursor-pointer bg-slate-100 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 text-center">About Me</h1>
+            <div className="text-center max-w-md text-base sm:text-lg lg:text-xl">
+                <p className="mb-3">
+                    Ayush Thapa, Currently a student at The British College.
+                </p>
+                <p className="mb-3">
+                    I'm passionate about understanding how things work and why they work.
+                </p>
+                <p className="mb-3">
+                    When I'm not coding or studying, you'll often find me immersed in the captivating world of crime thriller movies.
+                </p>
+                <p className="mb-3">
+                    There's something about the suspense and mystery that draws me in.
+                </p>
+                <p className="mb-3">
+                    Alternatively, I might be escaping into the realms of fantasy through the pages of a light novel, where imagination knows no bounds.
+                </p>
             </div>
-        </>
-    )
+            <div className="flex justify-center mt-5 space-x-4 sm:space-x-6">
+                {socialMedia.map((media, index) => (
+                    <div key={index}>
+                        <a href={media.link} target="_blank" rel="noopener noreferrer">
+                            <img
+                                src={media.logo}
+                                alt={media.name}
+                                className="w-10 h-10 sm:w-12 sm:h-12 hover:scale-125 transition-transform duration-500"
+                            />
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }
+
+export default AboutMe;
