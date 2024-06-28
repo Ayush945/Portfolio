@@ -55,7 +55,7 @@ function Navbar() {
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
                         onClick={() => scrollToRef(portfolioRef)}
                     >
-                        Portfolio
+                        Projects
                     </p>
                     <p
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
@@ -97,7 +97,7 @@ function Navbar() {
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
                         onClick={() => {scrollToRef(portfolioRef); toggleMenu();}}
                     >
-                        Portfolio
+                        Projects
                     </p>
                     <p
                         className='border rounded-lg p-2 hover:bg-black hover:text-white'
