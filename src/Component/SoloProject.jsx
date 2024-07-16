@@ -15,7 +15,7 @@ const soloProjects = [
     live: "https://shimmering-stardust-0197cd.netlify.app/",
   },
   {
-    id: 2, // Changed to ensure unique id
+    id: 2, 
     name: "Music Academy",
     image: musicPic,
     desc: "Music Academy website to learn music for beginners",
@@ -38,7 +38,7 @@ function SoloProject() {
           <div className='flex-shrink-0'>
             <img
               src={project.image}
-              alt={`${project.name} image`} // Dynamic alt text
+              alt={`${project.name} image`}
               className='h-auto w-full lg:w-[250px] lg:h-[300px] object-cover'
             />
           </div>

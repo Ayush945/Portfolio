@@ -4,6 +4,7 @@ import AboutMe from './AboutMe';
 import SecondComponent from './SecondComponent';
 import ThirdComponent from './ThirdComponent';
 import ContactMe from './ContactMe';
+import logo from '../Image/LogoA.png'
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +31,13 @@ function Navbar() {
                     className='text-3xl'
                     onClick={() => scrollToRef(homeRef)}
                 >
-                    <p>𝒜</p>
+                    <p>
+                        <img
+                        src={logo}
+                        alt='logo'
+                        className=' w-20 h-20'
+                        />
+                    </p>
                 </div>
                 <div className='hidden md:flex gap-6'>
                     <p
