@@ -13,7 +13,7 @@ function AboutMe() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 text-center">About Me</h1>
             <div className="text-center max-w-md text-base sm:text-lg lg:text-xl">
                 <p className="mb-3">
-                    Ayush Thapa, Currently a student at The British College.
+                Ayush Thapa, Bachelor’s in Computer Science from The British College, skilled in software development and problem-solving.
                 </p>
                 <p className="mb-3">
                     I'm passionate about understanding how things work and why they work.

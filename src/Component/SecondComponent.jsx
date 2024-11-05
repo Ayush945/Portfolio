@@ -1,6 +1,7 @@
 import React from 'react';
 import htmlLogo from '../Image/Html.png';
 import jsLogo from '../Image/Javascript.png';
+import nextjsLogo from '../Image/nextjsicon.png'
 import reactLogo from '../Image/React.png';
 import tailwindLogo from '../Image/Tailwind.png';
 import springLogo from '../Image/Spring.png';
@@ -14,9 +15,9 @@ import postmanLogo from '../Image/Postman.png';
 function SecondComponent() {
     const frontSkills = [
         { name: 'HTML', logo: htmlLogo },
-        { name: 'JavaScript', logo: jsLogo },
         { name: 'TailwindCSS', logo: tailwindLogo },
-        { name: 'React', logo: reactLogo }
+        { name: 'React', logo: reactLogo },
+        { name: 'Nextjs', logo: nextjsLogo },
     ];
 
     const backSkills = [
